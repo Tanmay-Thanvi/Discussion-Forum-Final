@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  nav {
+    background: #0077b6;
+    height: 70px;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    border-bottom-color: white;
+  }
+  
+  label.logo {
+    color: white;
+    font-size: 25px;
+    line-height: 70px;
+    padding: 0 30px;
+    font-weight: bold;
+  }
+  
+  label.logo a {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  label.logo a:hover {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    background: #0077b6;
+  }
+  
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  a.active,
+  a:hover {
+    text-decoration-color: white;
+    background: #003459;
+    transition: 0.5s;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 1110px) {
+    label.logo {
+      font-size: 22x;
+      padding-left: 50px;
+    }
+    nav ul li a {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 1000px) {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2878B6;
+      top: 70px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    }
+    a:hover,
+    a.active {
+     text-decoration-color: white;
+      background: #003459;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    label.logo {
+      font-size: 18px;
+    }
+    .checkbtn {
+      font-size: 20px;
+    }
+  }
+  footer {
+    background-color: #4481eb;
+    padding: 9px;
+    text-align: center;
+    color:black;
+  }  

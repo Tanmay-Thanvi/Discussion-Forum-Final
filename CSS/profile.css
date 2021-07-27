@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  background: #0077b6;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 10;
+}
+
+label.logo {
+  color: white;
+  font-size: 25px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+}
+
+label.logo a {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+label.logo a:hover {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  background: #0077b6;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #003459;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 70px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1110px) {
+  label.logo {
+    font-size: 22x;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #4361ee;
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: #003459;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  label.logo {
+    font-size: 18px;
+  }
+  .checkbtn {
+    font-size: 20px;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+}
+
+.msg h4 {
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.underline {
+  text-decoration: underline 4px #4481eb;
+}
+.msg h4 span {
+  color: #4481eb;
+}
+
+h4 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 15px;
+  margin-top: 25px;
+  margin-bottom: 45px;
+  margin-left: 100px;
+}
+
+img {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 180px;
+}
+
+@media (max-width: 750px) {
+  h4 {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 650px) {
+  p {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 580px) {
+  h4 {
+    font-size: 13px;
+    margin-left: 20px;
+  }
+  p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 400px) {
+  .ip h4 {
+    margin-top: 60px;
+  }
+  .msg h4 {
+    font-size: 20px;
+  }
+  .info {
+    margin-left: 10px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-field {
+  margin-top: 20px;
+  padding: 1px;
+}
+
+.btn {
+  margin: 20px;
+  margin-left: 30px;
+  background-color: #5995fd;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  transition: 0.1s;
+  border: solid 3px #4d84e2;
+}
+.btn:hover {
+  background-color: white;
+}
+
+#myBtn {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: #5995fd;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+  width: 120px;
+  border-radius: 5px;
+  transition: 0.1s;
+  border: solid 3px #4d84e2;
+}
+#myBtn:hover {
+  background-color: white;
+}
+.close {
+  position: absolute;
+  color: #aaa;
+  margin-left: 350px;
+  margin-bottom: 480px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 400px) {
+  .modal-content {
+    width: 300px;
+  }
+  .close {
+    margin-left: 250px;
+  }
+}
+footer {
+  background-color: #4481eb;
+  padding: 9px;
+  text-align: center;
+}
